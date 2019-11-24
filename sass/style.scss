@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i&display=swap');
+@import 'meyerStyle.scss';
+html{
+    background: black;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+
+.wrapper{
+    display: flex;
+    font-size: 16px;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+
+}
+
+.item{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3%;
+}
+
+.logo{
+    width: 60%;
+
+}
+
+.choose{
+    margin: 10%;
+}
+.sections{
+    background: white;
+    margin: 10%;
+
+}
+
+footer{
+    text-align: center;
+    color: #c2c2c2;
+}
+
+@media screen and (min-width: 600px)  {
+
+    .wrapper{
+
+        flex-direction: row;
+
+        
+    }
+    .item{
+        margin: 0%;
+    }
+
+
+
+
+}
+
+
+@media screen and (min-width: 1240px)  {
+    .wrapper{
+        justify-content: flex-start;
+        padding-left: 10%;
+        height: 90%;
+    }
+
+    footer{
+        padding-left: 10%;
+        text-align: left;
+    }
+
+}
