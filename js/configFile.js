@@ -29,4 +29,6 @@ export const SECTIONS = [
     'travel',
     'upshot',
     'world'
-]
+];
+
+export const N_NEWS = 12;

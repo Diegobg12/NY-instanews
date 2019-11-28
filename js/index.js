@@ -1,31 +1,64 @@
 
 // // 
-import { KEY, NYT, SECTIONS } from './configFile.min.js';
+import { KEY, NYT, SECTIONS, N_NEWS } from './configFile.min.js';
+import Box from './Box.min.js'
 
 
-let sections = $('.sections');
+run();
 
-for (let i = 0; i < SECTIONS.length; i++) {
-    let category = SECTIONS[i]
-    let newSection = $(`<option value=${category}>${category}</option>`)
-    sections.append(newSection)
+
+ 
+function createCards(allNews){
+    // newsSelected = [];
+    let i = 0;
+    while (i <= N_NEWS) {
+        let card = allNews[i];
+        let abstract = card.abstract;
+        let images = card.multimedia;
+        let itUrl = card.url;
+        if (abstract !== '' && itUrl !== '' && images.length > 3) {
+            var element = new Box();
+            i+=1;
+        }
+    }
+    // if
+    //  console.log(allNews.results[1]);
+    
 }
 
 
 
-// Conect to 
-$('.sections').change(function(event){
-    let option = $('.sections').val();
-    // let urt = NYT + option + '.json?api-key=' + KEY;
-    // console.log(urt);
-    $.ajax({
-        method: "GET",
-        url: NYT + option + '.json?api-key=' + KEY
-      }).done(function(data){
-        event.preventDefault();
-        const first = data.results[1];
-        console.log(first);
-      });
+function run (){
+    // Fill Sections -----------
 
-});
+        let sections = $('.sections');
+
+        SECTIONS.forEach(element => {
+            sections.append('<option value="' + element + '">' + element + '</option>');
+        });
+
+        // Conect to  API -------
+        $('.sections').change(function(event){
+        let option = $('.sections').val();
+        $.ajax({
+            method: "GET",
+            url: NYT + option + '.json?api-key=' + KEY
+            }).done(function(data){
+                event.preventDefault();
+                let test = NYT + option + '.json?api-key=' + KEY;
+                console.log(test);
+                const allNews = data.results;
+                // console.log(allNews);
+                // if (allNews.length >= N_NEWS) {
+                //     createCards(allNews);
+                // }else{
+
+                // }
+                createCards(allNews);
+            });
+
+        });
+
+}
+
 
