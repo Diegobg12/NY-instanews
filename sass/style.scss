@@ -10,8 +10,10 @@ html{
     color: $textColor;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    
 }
 
+// HEADER-----------
 
 .wrapper{
     display: flex;
@@ -40,18 +42,47 @@ html{
 
 }
 
-
-
-
 .sections{
     background: white;
     margin: 10%;
 
 }
 
+// SECTIONS-----------------
+
+.cards {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  
+    a {
+        position: relative;
+        color: $textColor;
+    }
+
+}
+  
+
+  
+.article-img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+  
+.article-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    // padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
 footer{
     text-align: center;
     color: $footerColor;
+    width: auto;
 }
 
 @media screen and (min-width: 600px)  {
@@ -66,8 +97,9 @@ footer{
         margin: 0%;
     }
 
-
-
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+      }
 
 }
 
@@ -75,7 +107,7 @@ footer{
 @media screen and (min-width: 1240px)  {
     .wrapper{
         justify-content: flex-start;
-        padding-left: 10%;
+        // padding-left: 10%;
         height: 90%;
     }
 
@@ -83,5 +115,9 @@ footer{
         padding-left: 10%;
         text-align: left;
     }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+      }
 
 }
