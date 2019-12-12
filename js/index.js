@@ -28,11 +28,8 @@ function createCards(allNews, board){
 
         }
         
-        
     }
 }
-
-
 
 function run (){
     // Fill Sections -----------
