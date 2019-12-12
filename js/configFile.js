@@ -2,7 +2,7 @@
 export const KEY = '59GK5LDd0fEgFmvWNrEvuESYgA9V7ZwQ';
 export const NYT = 'https://api.nytimes.com/svc/topstories/v2/';
 export const SECTIONS = [ 
-    'Select your category',
+    'Sections...',
     'arts',
     'automobiles',
     'books',

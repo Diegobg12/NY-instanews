@@ -36,8 +36,8 @@ html{
     }
 
     .logo{
-        width: 60%;
-    
+        // width: 60%;
+
     }
 
 }
@@ -61,9 +61,7 @@ html{
     }
 
 }
-  
 
-  
 .article-img {
     height: 500px;
     width: 100%;
@@ -90,16 +88,28 @@ footer{
     .wrapper{
 
         flex-direction: row;
+        .item{
+            margin: 0%;
+            text-align: left;
+    
+        }
 
+        .logo{
+            width: 20%;
+    
+        }
+          
         
     }
-    .item{
-        margin: 0%;
-    }
+
 
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
       }
+    
+    .logo{
+        width: 10%;
+    }
 
 }
 
@@ -111,8 +121,16 @@ footer{
         height: 90%;
     }
 
+    .logo{
+        padding-left: 5%;
+        width: 20%;
+    
+    }
+    
+
+
     footer{
-        padding-left: 10%;
+        padding-left: 5%;
         text-align: left;
     }
 

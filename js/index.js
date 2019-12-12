@@ -5,12 +5,12 @@ import { KEY, NYT, SECTIONS, N_NEWS } from './configFile.min.js';
 
 run();
 
-function createCards(allNews){
+function createCards(allNews, board){
     let i = 0;
     let j = 0;
 
     
-    while (i < N_NEWS) {
+    while (j < N_NEWS) {
         let card = allNews[i];
         let abstract = card.abstract;
         let images = card.multimedia;
@@ -53,17 +53,12 @@ function run (){
             }).done(function(data){
                 event.preventDefault();
                 let test = NYT + option + '.json?api-key=' + KEY;
-                console.log(test);
                 const allNews = data.results;
-
-                // if (allNews.length >= N_NEWS) {
-                //     createCards(allNews);
-                // }else{
-
-                // }
-                let board = $(".cards")
-                board.html(" ");
-                createCards(allNews);
+                if (allNews.length >= N_NEWS) {
+                    createCards(allNews, board);
+                }else{
+                    console.log("SORRY,NO NEWS FOR TODAY IN THIS CATEGORY")
+                }   
             });
 
         });
