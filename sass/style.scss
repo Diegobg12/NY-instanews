@@ -15,7 +15,10 @@ html{
 
 // HEADER-----------
 
+
+
 .wrapper{
+    transition: all 1s;
     display: flex;
     font-size: 16px;
     flex-direction: column;
@@ -36,7 +39,7 @@ html{
     }
 
     .logo{
-        // width: 60%;
+        width: 60%;
 
     }
 
@@ -48,9 +51,27 @@ html{
 
 }
 
+
+.wrapperAfter{
+    transition: all 1s;
+    height: 35%;
+    margin: 5% 0% 5% 0%;
+    .logo{
+        width: 30%;
+        margin: 0%;
+
+    }
+    .sections{
+        background: white;
+        margin: 5%;
+    }
+}
+
+
 // SECTIONS-----------------
 
 .cards {
+    transition: all 1s;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
@@ -72,7 +93,6 @@ html{
     position: absolute;
     bottom: 0;
     width: 100%;
-    // padding: 10px;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -98,8 +118,28 @@ footer{
             width: 20%;
     
         }
-          
+  
         
+    }
+
+    .wrapperAfter{
+        // transition: all 1s;
+        height: 7%;
+
+        .logo{
+            width: 10%;
+            margin-right: 10%;
+    
+        }
+        .sections{
+            background: white;
+            margin: 5%;
+        }
+        .item{
+            margin: 0%;
+            text-align: center;
+    
+        }
     }
 
 
@@ -127,8 +167,6 @@ footer{
     
     }
     
-
-
     footer{
         padding-left: 5%;
         text-align: left;
@@ -137,5 +175,27 @@ footer{
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
       }
+
+      .wrapperAfter{
+        transition: all 1s;
+        height: 7%;
+
+        .logo{
+            width: 10%;
+            margin-right: 10%;
+    
+        }
+        .sections{
+            background: white;
+            margin: 5%;
+        }
+        .item{
+            margin: 0%;
+            text-align: left;
+    
+        }
+    }
+
+    
 
 }
