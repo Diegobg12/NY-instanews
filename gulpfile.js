@@ -10,6 +10,9 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('scripts', function(){
   return gulp.src('./js/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
     .pipe(terser())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(gulp.dest('./build/js'))
@@ -29,12 +32,7 @@ gulp.task('sass', function(){
         .pipe(gulp.dest("./build/css"));
 
 })
-gulp.task('lint', function() {
-    return gulp.src('./js/*.js')
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
+
 gulp.task('reload', function(done) {
     browserSync.reload();
     done();
@@ -52,7 +50,7 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task("watch", function() {
-    gulp.watch("./js/*.js", gulp.series("lint", "scripts", "reload" ));
+    gulp.watch("./js/*.js", gulp.series("scripts", "reload" ));
     gulp.watch("./sass/*.scss", gulp.series("sass", "reload" ));
     gulp.watch("index.html", gulp.series("reload"));
   });
