@@ -69,6 +69,7 @@ function run (){
         });
 
         $(document).ready(function(){
+            $('select').niceSelect();
             $(document).ajaxStart(function(){
               $("#wait").css("display", "block");
             });
