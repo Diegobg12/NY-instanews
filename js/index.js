@@ -17,17 +17,15 @@ function createCards(allNews, board){
         let itUrl = card.url;
         let tittle = card.tittle;
 
+        // PREVENT IMAGES WITH
         if (abstract !== '' && itUrl !== '' && images.length > 3) {
             let newImage = images[4].url;
-            board.append('<a href=' + itUrl +'><img class="article-img" src="' + newImage +'" alt="' + tittle + '" /><h1 class="article-title">'+ abstract +'</h1></a>')
-            
+            board.append('<a class= "linkNew" href=' + itUrl +'><img class="article-img" src="' + newImage +'" alt="' + tittle + '" /><h1 class="article-title">'+ abstract +'</h1></a>')
             j+=1;
             i+=1;
         }else{
             i+=1;
-
         }
-        
     }
 }
 
@@ -65,10 +63,19 @@ function run (){
                     createCards(allNews, board);
                 }else{
                     console.log("SORRY,NO NEWS FOR TODAY IN THIS CATEGORY")
-                }   
+                } 
             });
         }
         });
+
+        $(document).ready(function(){
+            $(document).ajaxStart(function(){
+              $("#wait").css("display", "block");
+            });
+            $(document).ajaxComplete(function(){
+              $("#wait").css("display", "none");
+            });
+          });
 
 }
 

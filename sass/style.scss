@@ -1,18 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i&display=swap');
 @import 'meyerStyle.scss';
-
+@import './fonts.scss';
 $footerColor: #c2c2c2;
 $textColor: #ffffff;
+$fonts: 'Open Sans';
+$size: '16px';
 
 
 html{
     background: black;
     color: $textColor;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-family: $fonts, sans-serif;
+    font-size: $size;
     
 }
 
+body{
+    height: 100vh;
+}
+
+#wait{
+    display:none;
+    width: 100%;
+    margin: 30%;
+}
 // HEADER-----------
 
 
@@ -54,7 +65,7 @@ html{
 
 .wrapperAfter{
     transition: all 1s;
-    height: 35%;
+    height: 20%;
     margin: 5% 0% 5% 0%;
     .logo{
         width: 30%;
@@ -76,31 +87,43 @@ html{
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   
-    a {
+    .linkNew{
         position: relative;
         color: $textColor;
+        .article-img {
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+          
+        .article-title {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            word-spacing: 10px;
+            line-height: 1.6;
+        }
+        
     }
 
+    .linkNew:hover{
+        // position: absolute;
+        color: red;
+        // transition: all 1s;
+      }
+
 }
 
-.article-img {
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
-}
-  
-.article-title {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
+
 
 
 footer{
     text-align: center;
     color: $footerColor;
     width: auto;
+    margin: 2%;
 }
 
 @media screen and (min-width: 600px)  {
