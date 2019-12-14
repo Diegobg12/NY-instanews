@@ -32,7 +32,7 @@ function createCards(allNews, board){
 function run (){
     // Fill Sections -----------
         let sections = $('.sections');
-        $(".content").fadeOut(0);
+        $('.content').fadeOut(0);
         SECTIONS.forEach(element => {
             sections.append('<option value="' + element + '">' + element + '</option>');
         });
@@ -55,7 +55,7 @@ function run (){
             url: NYT + option + '.json?api-key=' + KEY
             }).done(function(data){
                 event.preventDefault();
-                $(".content").html(option);
+                $('.content').html(option);
                 const allNews = data.results;
 
                 if (allNews.length >= N_NEWS) {
@@ -73,9 +73,9 @@ function run (){
              $('select').niceSelect();
             $(document).ajaxStart(function(){
               $('#wait').css('display', 'block');
-              $(".content").fadeIn(0);
-              $(".content").addClass("contentAfeter");
-              $(".content").fadeOut(1500);
+              $('.content').fadeIn(0);
+              $('.content').addClass('contentAfeter');
+              $('.content').fadeOut(1500);
             });
             $(document).ajaxComplete(function(){
                 
