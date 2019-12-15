@@ -4,7 +4,7 @@ Project nº3 of RED ACADEMY Web Developer program.
 
 # ABOUT
 
-This is an app to take the news from the New York Times database, and display it according to Desing team especifications.
+This is an app to take the news from the New York Times database, and display it according to Design team specifications.
 
 #  CONFIG STEPS
 
@@ -23,7 +23,7 @@ This is an app to take the news from the New York Times database, and display it
     cssnano = require("gulp-cssnano"),
     eslint = require('gulp-eslint');
  ```
- + Acording to the configuration in gulpFile.js, all the files on `js`and `sass` folder will convert to the min version in `build`folder.
+ + According to the configuration in gulpFile.js, all the files on `js`and `sass` folder will convert to the min version in `build`folder.
  + Run `gulp`on the terminal, the index.html file will open on the browser.
  
 # GET THE API KEY.
@@ -35,17 +35,17 @@ This is an app to take the news from the New York Times database, and display it
   `https://api.nytimes.com/svc/topstories/v2/science.json?api-key=yourkey`
 
 
-# DESIGN REQUIRMENTS
+# DESIGN REQUIREMENTS
   
   + Design first for mobile version then adapt to Tablet and Desktop.
   + The `header`element adapt to screen size using FLEX
-  + The CARDS are agruped using a GRID BOX.
+  + The CARDS are grouped using a GRID BOX.
   
   #  SPECIAL FEATURES
   
   + The `select`element is stylized using https://hernansartorio.com/jquery-nice-select/
-  + usins `JQUERY`to add an other class to the header element. The new class adapts the element to the top of the website using `transition: all 1s;`on the sass file.
-  + Using `transition` funtionality on css the article abstract moves on y-axe. Also the tittle displays when the element is hoover.
+  + using `JQUERY`to add another class to the header element. The new class adapts the element to the top of the website using `transition: all 1s;`on the sass file.
+  + Using `transition` functionality on css the article abstract moves on y-axe. Also the tittle displays when the element is hover.
   
  # SOURCES
   +[NPM](https://docs.npmjs.com/cli/install)
@@ -55,4 +55,6 @@ This is an app to take the news from the New York Times database, and display it
   + [GRID](https://getbootstrap.com/docs/4.0/layout/grid/)
   
   
+
+
 
