@@ -4,7 +4,7 @@ Web app to take the news from the New York Times database, and display it accord
 
 ##  CONFIG STEPS
 
- + Download initial documents from [Project 3 - Instanews App](https://red-wdp-ws.herokuapp.com/project/project-03/)
+ + Download initial documents from [Instanews App](https://red-wdp-ws.herokuapp.com/project/project-03/)
  + Create initial folder and files such as `js` `index.html` `sass`.
  + On the project folder in your terminal install `npm install`. 
  + Instal gulp with `npm install gulp --save-dev`.
@@ -39,7 +39,7 @@ Web app to take the news from the New York Times database, and display it accord
   
   ##  SPECIAL FEATURES
   
-  + The `select`element is stylized using https://hernansartorio.com/jquery-nice-select/
+  + The `select`element is stylized using [Jquery](https://hernansartorio.com/jquery-nice-select/)
   + using `JQUERY`to add another class to the header element. The new class adapts the element to the top of the website using `transition: all 1s;`on the sass file.
   + Using `transition` functionality on css the article abstract moves on y-axe. Also the tittle displays when the element is hover.
   
@@ -58,7 +58,7 @@ Web app to take the news from the New York Times database, and display it accord
   
   
  ## SOURCES
-  +[NPM](https://docs.npmjs.com/cli/install)
+  + [NPM](https://docs.npmjs.com/cli/install)
   + [GULP](https://gulpjs.com/)
   + [JQUERY](https://jquery.com/)
   + [NEW YOTK TIME](https://developer.nytimes.com/).
