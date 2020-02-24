@@ -1,12 +1,8 @@
 # NEW YORK TIMES API
 
-Project nº3 of RED ACADEMY Web Developer program.
+Web app to take the news from the New York Times database, and display it according to Design team specifications.
 
-# ABOUT
-
-This is an app to take the news from the New York Times database, and display it according to Design team specifications.
-
-#  CONFIG STEPS
+##  CONFIG STEPS
 
  + Download initial documents from [Project 3 - Instanews App](https://red-wdp-ws.herokuapp.com/project/project-03/)
  + Create initial folder and files such as `js` `index.html` `sass`.
@@ -26,7 +22,7 @@ This is an app to take the news from the New York Times database, and display it
  + According to the configuration in gulpFile.js, all the files on `js`and `sass` folder will convert to the min version in `build`folder.
  + Run `gulp`on the terminal, the index.html file will open on the browser.
  
-# GET THE API KEY.
+## GET THE API KEY.
   
   + Go to [New York](https://developer.nytimes.com/) and sing in.
   + Create a new project and copy the API.
@@ -35,19 +31,33 @@ This is an app to take the news from the New York Times database, and display it
   `https://api.nytimes.com/svc/topstories/v2/science.json?api-key=yourkey`
 
 
-# DESIGN REQUIREMENTS
+## DESIGN REQUIREMENTS
   
   + Design first for mobile version then adapt to Tablet and Desktop.
   + The `header`element adapt to screen size using FLEX
   + The CARDS are grouped using a GRID BOX.
   
-  #  SPECIAL FEATURES
+  ##  SPECIAL FEATURES
   
   + The `select`element is stylized using https://hernansartorio.com/jquery-nice-select/
   + using `JQUERY`to add another class to the header element. The new class adapts the element to the top of the website using `transition: all 1s;`on the sass file.
   + Using `transition` functionality on css the article abstract moves on y-axe. Also the tittle displays when the element is hover.
   
- # SOURCES
+  ## FINAL RESULT
+  
+  ### Mobile
+  
+  ![alt text](mobile.png)
+  
+  ### Tablet
+  
+  ![alt text](tablet.png)
+  
+  ### Desktop
+  ![alt text](desktop.png)
+  
+  
+ ## SOURCES
   +[NPM](https://docs.npmjs.com/cli/install)
   + [GULP](https://gulpjs.com/)
   + [JQUERY](https://jquery.com/)
